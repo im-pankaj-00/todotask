@@ -35,11 +35,6 @@ public class TaskController {
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
         return ResponseEntity.ok(taskService.getTaskById(id));
     }
-
-//    @GetMapping("/completed")
-//    public ResponseEntity<List<Task>> getCompletedTasks() {
-//        return ResponseEntity.ok(taskService.getCompletedTasks());
-//    }
     
     @GetMapping("/paginated")
     public ResponseEntity<Page<Task>> getAllTasksPaginated(
